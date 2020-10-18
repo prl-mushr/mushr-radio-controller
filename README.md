@@ -5,7 +5,9 @@ Using the BitCraze CrazyRadio to tele-operate the MuSHR racecar over radio (as o
 TODO
 ## tx.py - run on transmitting PC
 Requires inputs module
+
 Uses standard MuSHR Controls
+
 Press B/Circle to end radio transmission
 
 ## crazyradio.py
