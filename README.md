@@ -8,6 +8,7 @@ Requires inputs module
 Uses standard MuSHR Controls
 Press B/Circle to end radio transmission
 
-crazyradio.py - unmodified BitCraze CrazyRadio Python library (used under MIT License from BitCraze)
+## crazyradio.py
+BitCraze CrazyRadio Python library (used under MIT License from BitCraze)
 https://github.com/bitcraze/crazyradio-firmware
 
