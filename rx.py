@@ -22,8 +22,7 @@ def pkt_decode(data):
 	pkt = data.tolist()
 
 	#print(''.join(map(chr,pkt)))
-
-return ''.join(map(chr,pkt))
+	return ''.join(map(chr,pkt))
 
 radio = radio_rx_init()
 print('Ready to Receive')
