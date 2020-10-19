@@ -57,20 +57,19 @@ dms = False
 print('Ready to Receive')
 
 while 1:
-	try:
-		res = radio.receive()
-		if res:
-			dms = True
-			radio.sendAck('ack')
-			msg = (pkt_decode(res))
-			#print(msg)
+	res = radio.receive()
+	if res:
+		dms = True
+		radio.sendAck('ack')
+		msg = (pkt_decode(res))
+		#print(msg)
 
-			intype = msg[0] #char code for movement type b,f,r,l
-			inval = msg[2:] #joystick input value
+		intype = msg[0] #char code for movement type b,f,r,l
+		inval = msg[2:] #joystick input value
 
-			dms_on(ui)
-			write_joy(ui, intype, inval)
+		dms_on(ui)
+		write_joy(ui, intype, inval)
 
-		elif res == None and dms == True:
-			dms = False
-			dms_off(ui)
+	elif res == None and dms == True:
+		dms = False
+		dms_off(ui)
