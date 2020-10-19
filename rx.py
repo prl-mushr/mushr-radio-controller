@@ -18,10 +18,18 @@ def radio_rx_test(radio):
 	radio.close()
 	return
 
+def pkt_decode(data):
+	pkt = data.tolist()
+
+	#print(''.join(map(chr,pkt)))
+
+return ''.join(map(chr,pkt))
+
 radio = radio_rx_init()
+print('Ready to Receive')
 
 while 1:
 	res = radio.receive()
 	if res:
 		radio.sendAck('ack')
-	print(res)
+	print(pkt_decode(res))

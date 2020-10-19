@@ -1,5 +1,6 @@
 from crazyradio import Crazyradio
 from inputs import get_gamepad #to read in controller data
+import array
 
 #initialise crazyradio device in TX mode
 def radio_tx_init():
@@ -14,13 +15,18 @@ def radio_tx_test(radio):
 	for i in range(0, 100):
 		res = radio.send_packet([i])
 		print(res.data)
+
 	radio.close()
 	return
 
 #send controller packet
 def radio_send_pkt(radio, data):
 	res = radio.send_packet(data)
-	print(res.data)
+	print(res.data) #prints ack
+
+	recdlist = res.data.tolist()
+	print(''.join(map(chr,recdlist)))
+
 	return
 
 dms = False #dead man's switch flag
