@@ -3,6 +3,7 @@ Using the BitCraze CrazyRadio to tele-operate the MuSHR racecar over radio (as o
 
 ## rx.py - run on receiving MuSHR Car
 Currently receives controller data
+Uses evdev to create a virtual controller input
 
 ## tx.py - run on transmitting PC
 Requires inputs module
