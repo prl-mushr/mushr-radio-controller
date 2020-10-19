@@ -31,4 +31,4 @@ while 1:
 	res = radio.receive()
 	if res:
 		radio.sendAck('ack')
-	print(pkt_decode(res))
+		print(pkt_decode(res))
