@@ -2,7 +2,8 @@
 Using the BitCraze CrazyRadio to tele-operate the MuSHR racecar over radio (as opposed to normal WiFi/Bluetooth)
 
 ## rx.py - run on receiving MuSHR Car
-TODO
+Currently receives controller data
+
 ## tx.py - run on transmitting PC
 Requires inputs module
 
