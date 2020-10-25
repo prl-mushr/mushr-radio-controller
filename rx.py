@@ -65,7 +65,7 @@ while 1:
 		#print(msg)
 
 		intype = msg[0] #char code for movement type b,f,r,l
-		inval = msg[2:] #joystick input value
+		inval = int(msg[2:]) #joystick input value
 
 		dms_on(ui)
 		write_joy(ui, intype, inval)
