@@ -32,18 +32,18 @@ def write_joy(ui, intype, inval):
 	joy = {'b' : e.ABS_Y, 'f' : e.ABS_Y,
 		   'r' : e.ABS_RX, 'l' : e.ABS_RX}
 
-	ui.write(e.ABS, joy.get(intype), inval)
+	ui.write(e.EV_ABS, joy.get(intype), inval)
 	ui.syn()
 
 	return
 
 def dms_on(ui):
-	ui.write(e.KEY, e.BTN_TL, 1)
+	ui.write(e.EV_KEY, e.BTN_TL, 1)
 	ui.syn()
 	return
 
 def dms_off(ui):
-	ui.write(e.KEY, e.BTN_TL, 0)
+	ui.write(e.EV_KEY, e.BTN_TL, 0)
 	ui.syn()
 	return
 #virtual controller dictionary

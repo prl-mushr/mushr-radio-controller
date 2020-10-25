@@ -36,17 +36,17 @@ print("CrazyRadio Initialised.")
 while 1:
 	events = get_gamepad()
 	for event in events:
-		#uncomment to see all controller input
+		#uncomment to see all controller input events
 		#print(event.ev_type,event.code,event.state)
 
-		#deadmanswitch L1/LB
+		#deadmanswitch L1/LB flag setting
 		if event.code == 'BTN_TL' and event.state == 1:
 			dms = True
 		elif event.code == 'BTN_TL' and event.state == 0:
 			dms = False
 
 		if dms: #dms pressed
-			#joystick input
+			#joystick input -> tweak depending on controller
 			if event.code == 'ABS_Y': #throttle
 				if event.state > 0:
 					print("back")
