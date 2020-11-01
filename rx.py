@@ -1,5 +1,5 @@
 from crazyradio import Crazyradio
-from evdev import UInput, ecodes as e
+from evdev import UInput, AbsInfo, ecodes as e
 
 #initialise crazyradio device in RX mode
 def radio_rx_init():
