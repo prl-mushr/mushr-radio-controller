@@ -47,7 +47,14 @@ def dms_off(ui):
 	ui.syn()
 	return
 #virtual controller dictionary
-cap = {1L: [304L, 305L, 307L, 308L, 310L, 311L, 314L, 315L, 316L, 317L, 318L], 3L: [(0L, AbsInfo(value=0, min=-32768, max=32767, fuzz=16, flat=128, resolution=0)), (1L, AbsInfo(value=0, min=-32768, max=32767, fuzz=16, flat=128, resolution=0)), (2L, AbsInfo(value=0, min=0, max=255, fuzz=0, flat=0, resolution=0)), (3L, AbsInfo(value=0, min=-32768, max=32767, fuzz=16, flat=128, resolution=0)), (4L, AbsInfo(value=0, min=-32768, max=32767, fuzz=16, flat=128, resolution=0)), (5L, AbsInfo(value=0, min=0, max=255, fuzz=0, flat=0, resolution=0)), (16L, AbsInfo(value=0, min=-1, max=1, fuzz=0, flat=0, resolution=0)), (17L, AbsInfo(value=0, min=-1, max=1, fuzz=0, flat=0, resolution=0))], 21L: [80L, 81L, 88L, 89L, 90L, 96L]}
+#to change this for different controllers, print device capabiilities using evdev and replace
+#adjust virtual input events accordingly
+
+#xinput
+#cap = {1L: [304L, 305L, 307L, 308L, 310L, 311L, 314L, 315L, 316L, 317L, 318L], 3L: [(0L, AbsInfo(value=0, min=-32768, max=32767, fuzz=16, flat=128, resolution=0)), (1L, AbsInfo(value=0, min=-32768, max=32767, fuzz=16, flat=128, resolution=0)), (2L, AbsInfo(value=0, min=0, max=255, fuzz=0, flat=0, resolution=0)), (3L, AbsInfo(value=0, min=-32768, max=32767, fuzz=16, flat=128, resolution=0)), (4L, AbsInfo(value=0, min=-32768, max=32767, fuzz=16, flat=128, resolution=0)), (5L, AbsInfo(value=0, min=0, max=255, fuzz=0, flat=0, resolution=0)), (16L, AbsInfo(value=0, min=-1, max=1, fuzz=0, flat=0, resolution=0)), (17L, AbsInfo(value=0, min=-1, max=1, fuzz=0, flat=0, resolution=0))], 21L: [80L, 81L, 88L, 89L, 90L, 96L]}
+
+#dualshock
+cap = {1L: [272L, 325L, 330L, 333L], 3L: [(0L, AbsInfo(value=0, min=0, max=1920, fuzz=0, flat=0, resolution=0)), (1L, AbsInfo(value=0, min=0, max=942, fuzz=0, flat=0, resolution=0)), (47L, AbsInfo(value=0, min=0, max=1, fuzz=0, flat=0, resolution=0)), (53L, AbsInfo(value=0, min=0, max=1920, fuzz=0, flat=0, resolution=0)), (54L, AbsInfo(value=0, min=0, max=942, fuzz=0, flat=0, resolution=0)), (57L, AbsInfo(value=0, min=0, max=65535, fuzz=0, flat=0, resolution=0))]}
 
 radio = radio_rx_init()
 ui = UInput(cap, name = 'Virtual Radio Controller')
