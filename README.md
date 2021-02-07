@@ -3,6 +3,8 @@ Using the BitCraze CrazyRadio to tele-operate the MuSHR racecar over radio (as o
 
 Use the XInput branch if you are using an Xbox or Logitech (in X-mode) controller. Use the main branch if you are using a DualShock 4 PS4 controller.
 
+The attached STL 3D Print file can be used with many FPV cameras and is mounted to the front bumper the same way that the push button is.
+
 ## rx.py - run on receiving MuSHR Car
 Receives controller data over CrazyRadio
 
